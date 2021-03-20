@@ -1,0 +1,202 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a, button, input, select {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+details, summary {
+    outline: none;
+    border: none;
+}
+
+summary::marker {
+    font-size: 0;
+}
+
+/*========================
+        Common Styles 
+==========================*/
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 46px;
+    background: linear-gradient(180deg, #EC2121 0%, #AC0000 100%);
+    -webkit-box-shadow: 0px 10px 19px 0px rgba(236,33,33,0.27); 
+    box-shadow: 0px 10px 19px 0px rgba(236,33,33,0.27);
+    border: 1px solid transparent;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.5s linear;
+}
+
+.btn:hover {
+    -webkit-box-shadow: 0px 5px 25px 0px rgba(236,33,33,0.66); 
+    box-shadow: 0px 5px 25px 0px rgba(236,33,33,0.66);
+    transition: all 0.5s linear;
+}
+
+/*========================
+        Сontainer 
+==========================*/
+
+.container {
+    max-width: 1195px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    color: #000;
+}
+
+/*========================
+         Header 
+==========================*/
+
+.header {
+    margin-top: 40px;
+    position: absolute;
+    width: 100%;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__item {
+    margin-right: 50px;
+}
+
+.nav__item:last-child {
+    margin-right: 0;
+}
+
+.nav__link {
+    font-size: 15px;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.nav__link:hover {
+    color: #EC2121;
+    transition: all 0.2s ease;
+}
+
+.nav__link:hover:before {
+    content: "";
+    width: 11px;
+    height: 4px;
+    background-color: #EC2121;
+    position: absolute;
+    left: calc(50% - 11px / 2);
+    bottom: -5px;
+}
+
+/*========================
+      Section General 
+==========================*/
+
+.general {
+    background: url(../img/general/general-bg.png);
+    background-size: cover;
+    background-position: top;
+    min-height: 1080px;
+    padding-top: 120px;
+    position: relative;
+    z-index: 1;
+    top: 0;
+}
+
+.general__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.general__title {
+    width: 100%;
+    max-width: 570px;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 63px;
+}
+
+.general__title span {
+    color: #EC2121;
+}
+
+.general__buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 430px;
+}
+
+.general__btn {
+    border: 1px solid #EC2121;
+    background: #fff;
+    color: #EC2121;
+}
+
+.general__btn img {
+    margin-right: 5px;
+    width: 24px;
+    height: 16px;
+}
+
+.general__img {
+    width: 598px;
+    height: 469px;
+}
+
+/*========================
+      Section Monitoring 
+==========================*/
+
+.monitoring {
+    background: linear-gradient(360deg, #FEF4F4 78.59%, rgba(255, 255, 255, 0.4) 121.66%, rgba(255, 255, 255, 0) 136.83%);
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    bottom: calc(50% - 1850px / 2);
+}
+
+.monitoring__img {
+
+}
