@@ -357,4 +357,6 @@ summary::marker {
 
 .benefits {
     background-color: #FEF4F4;
+    font-size: 50px;
+    color: red;
 }
