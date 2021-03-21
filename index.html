@@ -10,7 +10,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lite DeathMatch</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
@@ -18,56 +17,58 @@
     <link rel="icon" href="img/icons/logo.svg" type="image/x-icon">
 </head>
 <body>
-    <article class="wrapper">
-        <header class="header">
-            <div class="container">
-                <div class="header__inner">
-                    <a href="index.html">
-                        <img src="img/icons/logo.svg" alt="Logo" class="logo">
-                    </a>
-                    <nav class="nav">
-                        <ul class="nav__list">
-                            <li class="nav__item">
-                                <a href="#" class="nav__link">Главная</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#" class="nav__link">Как начать игру</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#" class="nav__link">Форум</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#" class="nav__link">Мы Вконтакте</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <a href="#" class="btn">Пополнить счет</a>
-                </div>
-            </div>
-        </header>
-        
-        <section class="general">
+    <!--========== HEADER ==========-->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html">
+                    <img src="img/icons/logo.svg" alt="Logo" class="logo">
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" data-scroll="#general">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" data-scroll="#guide">Как начать игру</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="https://forum.diamondrp.ru" class="nav__link">Форум</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="https://vk.com/eugeneloveyou" target="_blank" class="nav__link">Мы Вконтакте</a>
+                        </li>
+                    </ul>
+                </nav> <!-- /.nav -->
+                <a href="#" class="btn">Пополнить счет</a>
+            </div> <!-- /.header__inner -->
+        </div> <!-- /.container -->
+    </header>
+    <!--========== \END HEADER ==========-->
+
+    <main>
+        <!-- Секция "Главный экран" -->
+        <section class="general" id="general">
             <div class="container">
                 <div class="general__inner">
                     <div class="general__content">
                         <h1 class="general__title"><span>Lite DeathMatch</span> Место твоей жизни и смерти</h1>
                         <div class="general__buttons">
-                            <a href="#" class="btn">Скачать лаунчер</a>
-                            <a href="#" class="general__btn btn">
+                            <a href="#" class="btn" data-scroll="#guide">Скачать лаунчер</a>
+                            <a href="samp://46.174.50.46:7790" class="general__btn btn">
                                 <img src="img/icons/joystick.svg" alt="Joystick icon">
                                 Начать игру
                             </a>
                         </div>
-                    </div>
+                    </div> <!-- /.general__content -->
                     <div class="general__visual">
                         <img src="img/general/humans.png" alt="Humans" class="general__img">
                     </div>
-                </div>
-            </div>
+                </div> <!-- /.general__inner -->
+            </div> <!-- /.container -->
         </section>
-    </article>
-
-    <main class="main-page">
+        
+        <!-- Секция "Мониторинг сервера" -->
         <section class="monitoring">
             <div class="container">
                 <h2 class="title"><span>Мониторинг</span> Сервера</h2>
@@ -83,17 +84,15 @@
                             <div class="monitoring__info">
                                 <h2 class="monitoring__info-name">Lite Death Match  Server#1</h2>
                                 <div class="monitoring__adress">
-                                    <div class="coupon-row">
-                                        <p class="coupon-field" id="coupon-field">192.168.0.1:7777</p>
+                                    <div class="adress-row">
+                                        <a href="samp://46.174.50.46:7790" class="adress-field" id="adress-field">192.168.0.1:7777</a>
                                     </div>
-                                    <button class="coupon-btn">
-                                        <svg width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5.77772 9.00006H2.22216C1.86854 9.00006 1.5294 8.84203 1.27935 8.56072C1.0293 8.27942 0.888828 7.89789 0.888828 7.50006V2.50006C0.888828 2.36745 0.842003 2.24028 0.758653 2.14651C0.675304 2.05274 0.562257 2.00006 0.444383 2.00006C0.326509 2.00006 0.213463 2.05274 0.130114 2.14651C0.0467642 2.24028 -6.10352e-05 2.36745 -6.10352e-05 2.50006V7.50006C-6.10352e-05 8.1631 0.234065 8.79899 0.650813 9.26783C1.06756 9.73667 1.63279 10.0001 2.22216 10.0001H5.77772C5.89559 10.0001 6.00864 9.94738 6.09199 9.85361C6.17534 9.75985 6.22216 9.63267 6.22216 9.50006C6.22216 9.36745 6.17534 9.24028 6.09199 9.14651C6.00864 9.05274 5.89559 9.00006 5.77772 9.00006ZM7.99994 3.47006C7.99531 3.42413 7.98637 3.37888 7.97327 3.33506V3.29006C7.9519 3.23865 7.9234 3.19139 7.88883 3.15006L5.22216 0.150061C5.18542 0.111169 5.14341 0.0791015 5.09772 0.055061H5.05772L4.91549 6.10352e-05H3.11105C2.75743 6.10352e-05 2.41829 0.158096 2.16824 0.439401C1.91819 0.720706 1.77772 1.10224 1.77772 1.50006V6.50006C1.77772 6.89789 1.91819 7.27942 2.16824 7.56072C2.41829 7.84203 2.75743 8.00006 3.11105 8.00006H6.66661C7.02023 8.00006 7.35937 7.84203 7.60942 7.56072C7.85946 7.27942 7.99994 6.89789 7.99994 6.50006V3.50006V3.47006ZM5.33327 1.70506L6.48438 3.00006H5.77772C5.65984 3.00006 5.5468 2.94738 5.46345 2.85361C5.3801 2.75985 5.33327 2.63267 5.33327 2.50006V1.70506ZM7.11105 6.50006C7.11105 6.63267 7.06423 6.75985 6.98088 6.85361C6.89753 6.94738 6.78448 7.00006 6.66661 7.00006H3.11105C2.99318 7.00006 2.88013 6.94738 2.79678 6.85361C2.71343 6.75985 2.66661 6.63267 2.66661 6.50006V1.50006C2.66661 1.36745 2.71343 1.24028 2.79678 1.14651C2.88013 1.05274 2.99318 1.00006 3.11105 1.00006H4.44438V2.50006C4.44438 2.89789 4.58486 3.27942 4.83491 3.56072C5.08496 3.84203 5.42409 4.00006 5.77772 4.00006H7.11105V6.50006Z" fill="#FFD0D0"/>
-                                        </svg>                                        
+                                    <button class="adress-btn">
+                                        <img src="img/icons/copy.svg" alt="Copy">
                                     </button>
                                 </div>
                             </div>
-                            <a href="#" class="monitoring__btn btn">Играть</a>
+                            <a href="samp://46.174.50.46:7790" class="monitoring__btn btn">Играть</a>
                         </div>
                         <div class="monitoring__numerator">
                             <div class="monitoring__numerator-item">
@@ -115,11 +114,12 @@
                                 <p>Vip игроков онлайн</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </div> <!-- /.monitoring__content -->
+                </div> <!-- /.monitoring__inner -->
+            </div> <!-- /.container -->
         </section> 
     
+        <!-- Секция "Особенности игры" -->
         <section class="benefits">
             <div class="container">
                 <div class="benefits__inner">
@@ -144,12 +144,13 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="benefits__btn btn">И многое другое</a>
-                </div>
-            </div>
+                    <a href="https://youtu.be/ucLzxNSPsg8" target="_blank" class="benefits__btn btn">И многое другое</a>
+                </div> <!-- /.benefits__inner -->
+            </div> <!-- /.container -->
         </section>
 
-        <section class="guide">
+        <!-- Секция "Как начать играть" -->
+        <section class="guide" id="guide">
             <div class="container">
                 <div class="guide__inner">
                     <h2 class="title"><span>Как начать</span> играть</h2>
@@ -159,7 +160,7 @@
                             <div class="guide__item-content">
                                 <h3 class="guide__item-title">Скачайте и установите что то</h3>
                                 <p class="guide__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis urna proin netus quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis urna proin netus quam.</p>
-                                <a href="#" class="guide__btn btn">Скачать что то там</a>
+                                <a href="https://youtu.be/tYWMagefG34" target="_blank" class="guide__btn btn">Скачать что то там</a>
                             </div>
                         </div>
                         <div class="guide__item">
@@ -167,7 +168,7 @@
                             <div class="guide__item-content">
                                 <h3 class="guide__item-title">Скачайте и установите что то</h3>
                                 <p class="guide__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis urna proin netus quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis urna proin netus quam.</p>
-                                <a href="#" class="guide__btn btn">Скачать что то там</a>
+                                <a href="https://youtu.be/tYWMagefG34" target="_blank" class="guide__btn btn">Скачать что то там</a>
                             </div>
                         </div>
                         <div class="guide__item">
@@ -175,14 +176,15 @@
                             <div class="guide__item-content">
                                 <h3 class="guide__item-title">Скачайте и установите что то</h3>
                                 <p class="guide__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis urna proin netus quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis urna proin netus quam.</p>
-                                <a href="#" class="guide__btn btn">Скачать что то там</a>
+                                <a href="https://youtu.be/tYWMagefG34" target="_blank" class="guide__btn btn">Скачать что то там</a>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </div> <!-- /.guide__content -->
+                </div> <!-- /.guide__inner -->
+            </div> <!-- /.container -->
         </section>
 
+        <!-- Секция "Социальные сети" -->
         <section class="socials">
             <div class="container">
                 <div class="socials__inner">
@@ -192,7 +194,7 @@
                         </a>
                         <div class="socials__item-content">
                             <h4 class="socials__item-title">Новостное сообщество <span>ВКонтакте</span></h4>
-                            <a href="#" class="socials__btn">Подписаться</a>
+                            <a href="https://t.me/pavelfers" target="_blank" class="socials__btn">Подписаться</a>
                         </div>
                     </div>
                     <div class="socials__item">
@@ -201,7 +203,7 @@
                         </a>
                         <div class="socials__item-content">
                             <h4 class="socials__item-title">Наш канал в <span>Телеграм</span></h4>
-                            <a href="#" class="socials__btn">Подписаться</a>
+                            <a href="https://t.me/pavelfers" target="_blank" class="socials__btn">Подписаться</a>
                         </div>
                     </div>
                     <div class="socials__item">
@@ -210,17 +212,45 @@
                         </a>
                         <div class="socials__item-content">
                             <h4 class="socials__item-title">Наш канал <span>Discord</span></h4>
-                            <a href="#" class="socials__btn">Подключиться</a>
+                            <a href="https://t.me/pavelfers" target="_blank" class="socials__btn">Подключиться</a>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div> <!-- /.socials__inner -->
+            </div> <!-- /.container -->
         </section>
     </main>
 
+    <!--========== FOOTER ==========-->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <nav class="footer__nav nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" data-scroll="#guide">Как начать игру</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="https://forum.diamondrp.ru" class="nav__link">Форум</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="https://vk.com/eugeneloveyou" target="_blank" class="nav__link">Мы ВКонтакте</a>
+                        </li>
+                    </ul>
+                </nav> <!-- /.nav -->
+                <a href="index.html" class="footer__logo">
+                    <img src="img/icons/logo.svg" alt="Logo">
+                </a>
+                <a href="#" class="nav__link">Договор офферты</a>
+            </div> <!-- /.footer__inner -->
+        </div> <!-- /.container -->
+    </footer>
+    <!--========== \END FOOTER ==========-->
+
     <!-- Jquery library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Jquery circle progress library for section monitoring -->
     <script src="https://rawgit.com/kottenator/jquery-circle-progress/1.2.2/dist/circle-progress.js"></script>
+    <!-- Main js file connection -->
     <script src="js/main.js"></script>
 </body>
 </html>

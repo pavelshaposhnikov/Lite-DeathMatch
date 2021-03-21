@@ -22,9 +22,21 @@ $(function() {
     }
   
     // copy coupone code to clipboard
-    $(".coupon-btn").on("click", function() {
-      copyToClipboard("#coupon-field");
+    $(".adress-btn").on("click", function() {
+      copyToClipboard("#adress-field");
       $(".coupon-alert").fadeIn("slow");
     });
   });
+
   
+/* Smooth Scroll */
+$("[data-scroll]").on("click", function(event) {
+  event.preventDefault();
+      
+    let elementId = $(this).data(`scroll`);
+    let elementOffset = $(elementId).offset().top;
+              
+$("html, body").animate({
+  scrollTop: elementOffset - 50
+  }, 600);
+});  

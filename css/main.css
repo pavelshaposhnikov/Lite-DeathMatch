@@ -4,6 +4,7 @@ body {
     font-weight: 400;
     padding: 0;
     margin: 0;
+    background-color: #FDF1F1;
 }
 
 *,
@@ -55,13 +56,13 @@ summary::marker {
     font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
-    transition: all 0.5s linear;
+    transition: all 0.2s linear;
 }
 
 .btn:hover {
     -webkit-box-shadow: 0px 5px 25px 0px rgba(236,33,33,0.66); 
     box-shadow: 0px 5px 25px 0px rgba(236,33,33,0.66);
-    transition: all 0.5s linear;
+    transition: all 0.2s linear;
 }
 
 .title {
@@ -88,36 +89,6 @@ summary::marker {
     margin: 0 auto;
     padding: 0 15px;
     color: #000;
-}
-
-/*========================
-         Wrapper 
-==========================*/
-
-.wrapper {
-    position: relative;
-}
-
-.wrapper::before {
-    content: "";
-    position: absolute;
-    background: url(../img/decorations/square.png);
-    width: 337px;
-    height: 502px;
-    z-index: 111;
-    bottom: 0;
-    left: 0;
-}
-
-.wrapper::after {
-    content: "";
-    position: absolute;
-    background: url(../img/decorations/sphere.png) no-repeat;
-    width: 194px;
-    height: 184px;
-    bottom: 0;
-    right: 250px;
-    z-index: 111;
 }
 
 /*========================
@@ -177,8 +148,8 @@ summary::marker {
 ==========================*/
 
 .general {
-    background: url(../img/general/testbg.png);
-    min-height: 680px;
+    background: url(../img/general/general-bg.png);
+    min-height: 670px;
     padding-top: 120px;
     position: relative;
     background-position: top;
@@ -186,10 +157,22 @@ summary::marker {
     top: 0;
 }
 
+.general::before {
+    content: "";
+    position: absolute;
+    background: url(../img/decorations/square.png);
+    width: 349px;
+    height: 502px;
+    left: -70px;
+    bottom: -175px;
+    z-index: -1;
+}
+
 .general__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .general__title {
@@ -228,8 +211,19 @@ summary::marker {
     position: relative;
 }
 
+.general__visual::before {
+    content: "";
+    position: absolute;
+    background: url(../img/decorations/sphere.png);
+    width: 194px;
+    height: 184px;
+    bottom: -64px;
+    right: 35px;
+}
+
 .general__img {
-    width: 598px;
+    max-width: 598px;
+    width: 100%;
     height: 469px;
 }
 
@@ -237,22 +231,14 @@ summary::marker {
       Section Monitoring 
 ==========================*/
 
-.main-page {
-    background: linear-gradient(360deg, #FEF4F4 78.59%, rgba(255, 255, 255, 0.4) 121.66%, rgba(255, 255, 255, 0) 136.83%);
-    position: absolute;
-    width: 100%;
-    top: 620px;
-    z-index: 11;
+.monitoring {
+    background: url(../img/monitoring/monitoring-bg.png);
+    min-height: 734px;
 }
 
-/*
-.monitoring {
-    background: linear-gradient(360deg, #FEF4F4 78.59%, rgba(255, 255, 255, 0.4) 121.66%, rgba(255, 255, 255, 0) 136.83%);
-    position: absolute;
-    z-index: 4;
-    width: 100%;
-    bottom: -590px;
-} */
+.monitoring .title {
+    margin: 0 auto;
+}
 
 .monitoring__inner {
     display: flex;
@@ -312,12 +298,16 @@ summary::marker {
     margin-top: 10px;
 }
 
-.coupon-field {
+.adress-field {
     font-size: 14px;
     color: #EC2121;
 }
 
-.coupon-btn {
+.adress-field:hover {
+    text-decoration: underline;
+}
+
+.adress-btn {
     margin-left: 4px;
     background: none;
     border: none;
@@ -364,20 +354,37 @@ summary::marker {
 ==========================*/
 
 .benefits {
-    background-color: #FEF4F4;
+    background-color: #FDF1F1;
+}
+
+.benefits__inner .title {
+    margin: 0 auto;
+    padding-top: 65px;
 }
 
 .benefits__content {
     margin-top: 58px;
     display: flex;
     justify-content: space-between;
+    position: relative;
+}
+
+.benefits__content::before {
+    content: "";
+    position: absolute;
+    background: url(../img/decorations/triangle.png);
+    width: 155px;
+    height: 145px;
+    left: -200px;
+    bottom: 175px;
 }
 
 .benefits__item {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 370px;
+    max-width: 370px;
+    width: 100%;
     height: 258px;
     background-color: #fff;
     border-radius: 10px;
@@ -398,7 +405,7 @@ summary::marker {
     width: 130px;
     height: 256px;
     top: 0;
-    left: 0;
+    left: -1px;
     z-index: 1;
 }
 
@@ -446,13 +453,19 @@ summary::marker {
 
 .benefits__btn {
     margin-top: 24px;
-    width: 1170px;
+    max-width: 1170px;
+    width: 100%;
     height: 71px;
     box-shadow: none;
     font-size: 25px;
     color: #EC2121;
     background: #fff;
     border-radius: 10px;
+    transition: all 0.5s linear;
+}
+
+.benefits__btn:hover {
+    transition: all 0.5s linear;
 }
 
 /*========================
@@ -461,7 +474,7 @@ summary::marker {
 
 .guide {
     margin-top: 60px;
-    background: url(../img/guide/Group\ 58.png) center center no-repeat;
+    background: url(../img/guide/guide-bg.png) center center no-repeat;
     min-height: 870px;
     position: relative;
     background-size: cover;
@@ -469,6 +482,17 @@ summary::marker {
 
 .guide__inner {
     padding-top: 80px;
+    position: relative;
+}
+
+.guide__inner::before {
+    content: "";
+    position: absolute;
+    background: url(../img/decorations/polyhedron.png);
+    width: 200px;
+    height: 200px;
+    right: -150px;
+    top: -50px;
 }
 
 .guide__inner .title {
@@ -487,11 +511,11 @@ summary::marker {
 }
 
 .guide__item {
-    width: 372px;
+    max-width: 372px;
+    width: 100%;
     height: 316px;
     border-radius: 10px;
     background: url(../img/guide/item-bg1.png) center center no-repeat;
-    background-size: contain;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     position: relative;
 }
@@ -535,7 +559,8 @@ summary::marker {
 
 .guide__btn {
     margin-top: 35px;
-    width: 326px;
+    max-width: 326px;
+    width: 100%;
     height: 46px;
     background: #fff;
     color: #EC2121;
@@ -544,7 +569,7 @@ summary::marker {
 .guide__btn:hover {
     -webkit-box-shadow: 0px 0px 30px 6px rgba(255,255,255,0.66); 
     box-shadow: 0px 0px 30px 6px rgba(255,255,255,0.66);
-    transition: all 0.5s linear;
+    transition: all 0.2s linear;
 }
 
 
@@ -562,7 +587,7 @@ summary::marker {
     justify-content: space-between;
     position: absolute;
     content: "";
-    bottom: 17px;
+    bottom: 0;
 }
 
 .socials__item {
@@ -571,7 +596,8 @@ summary::marker {
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    width: 370px;
+    max-width: 370px;
+    width: 100%;
     height: 133px;
     border-radius: 66px 10px 10px 66px;
     padding: 10px 10px;
@@ -647,6 +673,7 @@ summary::marker {
 }
 
 .socials__item-content {
+    margin-left: 15px;
     max-width: 222px;
     width: 100%;
 }
@@ -657,6 +684,16 @@ summary::marker {
 
 .socials__item:nth-child(3) .socials__item-title {
     max-width: 170px;
+}
+
+.socials__item:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    background: url(../img/decorations/persphere.png);
+    width: 237px;
+    height: 257px;
+    left: -275px;
+    bottom: 50px;
 }
 
 .socials__item-title {
@@ -681,12 +718,163 @@ summary::marker {
     font-size: 17px;
     font-weight: 500;
     border-radius: 11px;
-    transition: all 0.3s linear;
+    transition: all 0.4s linear;
 }
 
 .socials__btn:hover {
     -webkit-box-shadow: 0px 0px 12px 10px rgba(39, 135, 245, 0.2);
     -moz-box-shadow: 0px 0px 12px 10px rgba(39, 135, 245, 0.2);
     box-shadow: 0px 0px 12px 10px rgba(39, 135, 245, 0.2);
-    transition: all 0.3s linear;
+    transition: all 0.4s linear;
+}
+
+
+/*========================
+         Footer 
+==========================*/
+
+.footer {
+    background-color: #fff;
+    height: 100%;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    height: 93px;
+}
+
+.footer__inner::before {
+    content: "";
+    position: absolute;
+    background: url(../img/decorations/big-triangle.png);
+    width: 140px;
+    height: 156px;
+    right: -178px;
+    bottom: 20px;
+}
+
+.footer__inner .nav__link::before {
+    display: none;
+}
+
+.footer__logo {
+    width: 110px;
+    height: 27px;
+    position: absolute;
+    left: calc(50% - 110px / 2);
+}
+
+/*========================
+         Media 
+==========================*/
+
+@media (max-width: 1525px) {
+
+    .guide__inner::before {
+        right: -35px;
+    }
+
+    .footer__inner::before {
+        right: -127px;
+        bottom: 40px;
+    }
+}
+
+@media (max-width: 1420px) {
+
+    .general::before {
+        left: -177px;
+    }
+
+    .benefits__content::before {
+        left: -63px;
+        bottom: 264px;
+    }
+
+    .socials__item:nth-child(1)::after {
+        left: -106px;
+        bottom: 133px;
+    }
+
+    .footer__inner::before {
+        right: -9px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .guide__inner::before {
+        right: 60px;
+    }
+
+    .footer__inner::before {
+        right: 50px;
+        bottom: 30px;
+    }
+}
+
+@media (max-width: 1180px) {
+    .guide__item, .benefits__item {
+        margin-right: 20px;
+    }
+
+    .guide__item:nth-child(3), .benefits__item:nth-child(3) {
+        margin-right: 0;
+    }
+
+    .socials__inner {
+        justify-content: space-around;
+        flex-wrap: wrap;
+        bottom: -40px;
+    }
+
+    .socials__item:nth-child(1)::after {
+        display: none;
+    }
+
+    .socials__item:nth-child(3) {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 1130px) {
+
+    .monitoring__server {
+        width: 535px;
+        padding-right: 10px;
+    }
+    
+    .benefits__content {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .benefits__content::before {
+        left: 39px;
+        bottom: 59px;
+    }
+
+    .benefits__item:nth-child(3) {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 1040px) {
+
+    .monitoring__server {
+        width: 485px;
+    }
+
+    .monitoring__info-name {
+        font-size: 14px;
+    }
+    .monitoring__btn {
+        width: 104px;
+    }
+
+    .footer__logo {
+        left: calc(53% - 110px / 2);
+    }
 }
