@@ -91,14 +91,14 @@ summary::marker {
 }
 
 /*========================
-         Main 
+         Wrapper 
 ==========================*/
 
-.main {
+.wrapper {
     position: relative;
 }
 
-.main::before {
+.wrapper::before {
     content: "";
     position: absolute;
     background: url(../img/decorations/square.png);
@@ -109,7 +109,7 @@ summary::marker {
     left: 0;
 }
 
-.main::after {
+.wrapper::after {
     content: "";
     position: absolute;
     background: url(../img/decorations/sphere.png) no-repeat;
@@ -177,11 +177,11 @@ summary::marker {
 ==========================*/
 
 .general {
-    background: url(../img/general/general-bg.png);
-    background-position: top;
-    min-height: 700px;
+    background: url(../img/general/testbg.png);
+    min-height: 680px;
     padding-top: 120px;
     position: relative;
+    background-position: top;
     z-index: 1;
     top: 0;
 }
@@ -237,13 +237,22 @@ summary::marker {
       Section Monitoring 
 ==========================*/
 
+.main-page {
+    background: linear-gradient(360deg, #FEF4F4 78.59%, rgba(255, 255, 255, 0.4) 121.66%, rgba(255, 255, 255, 0) 136.83%);
+    position: absolute;
+    width: 100%;
+    top: 620px;
+    z-index: 11;
+}
+
+/*
 .monitoring {
     background: linear-gradient(360deg, #FEF4F4 78.59%, rgba(255, 255, 255, 0.4) 121.66%, rgba(255, 255, 255, 0) 136.83%);
     position: absolute;
     z-index: 4;
     width: 100%;
     bottom: -590px;
-}
+} */
 
 .monitoring__inner {
     display: flex;
@@ -357,6 +366,92 @@ summary::marker {
 
 .benefits {
     background-color: #FEF4F4;
-    font-size: 50px;
-    color: red;
+}
+
+.benefits__content {
+    margin-top: 58px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.benefits__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 370px;
+    height: 258px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    text-align: left;
+}
+
+.benefits__item-content {
+    max-width: 198px;
+    width: 100%;
+    margin-right: 25px;
+}
+
+.benefits__item:after {
+    content: "";
+    position: absolute;
+    background: url(../img/benefits/angle.png);
+    width: 130px;
+    height: 256px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.benefits__item:before {
+    content: "";
+    position: absolute;
+    background: url(../img/icons/holy-grail.svg);
+    bottom: calc(60% - 72px / 2);
+    left: 20px;
+    height: 72px;
+    width: 52px;
+    z-index: 2;
+}
+
+.benefits__item:nth-child(2)::before {
+    background: url(../img/icons/big-joystick.svg);
+    width: 73px;
+    height: 47px;
+    bottom: calc(60% - 47px / 2);
+}
+
+.benefits__item:nth-child(3)::before {
+    background: url(../img/icons/store.svg);
+    width: 73px;
+    height: 72px;
+}
+
+.benefits__item-title {
+    margin-bottom: 7px;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #EC2121;
+}
+
+.benefits__item:nth-child(2) .benefits__item-title {
+    max-width: 90px;
+    width: 100%;
+}
+
+.benefits__item-text {
+    font-size: 14px;
+    color: #000;
+}
+
+.benefits__btn {
+    margin-top: 24px;
+    width: 1170px;
+    height: 71px;
+    box-shadow: none;
+    font-size: 25px;
+    color: #EC2121;
+    background: #fff;
+    border-radius: 10px;
 }
