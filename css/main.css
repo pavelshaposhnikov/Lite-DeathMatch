@@ -1472,7 +1472,7 @@ summary::marker {
     }
 
     .monitoring {
-        min-height: 415px;
+        min-height: 445px;
     }
 
     .monitoring__inner {
@@ -1505,6 +1505,11 @@ summary::marker {
 
     .adress-field {
         font-size: 15px;
+    }
+
+    .benefits__content::before {
+        top: -256px;
+        left: 122px;
     }
 
     .benefits__item:after {
