@@ -164,7 +164,7 @@ summary::marker {
     visibility: hidden;
     transition: all .375s;
     width: 100vw;
-    height: 100vw;
+    height: 200vw;
 }
 
 .mobile-nav.is-open {
@@ -1354,6 +1354,10 @@ summary::marker {
     .benefits__content::before {
         top: -100px;
     }
+    
+    .benefits__btn {
+        margin-top: 20px;
+    }
 
     .guide__item {
         max-width: 209px;
@@ -1416,8 +1420,12 @@ summary::marker {
         margin-top: 25px;
     }
 
+    .socials {
+        margin-bottom: 155px;
+    }
+
     .socials__inner {
-        bottom: -200px;
+        bottom: -109px;
     }
 
     .socials__item {
@@ -1461,6 +1469,18 @@ summary::marker {
 
     .general__buttons .btn {
         margin-bottom: 25px;
+    }
+
+    .monitoring {
+        min-height: 415px;
+    }
+
+    .monitoring__inner {
+        margin: 30px 0;
+    }
+
+    .monitoring__visual {
+        display: none;
     }
 
     .monitoring__numerator-score {
