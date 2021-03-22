@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="img/icons/logo.svg" type="image/x-icon">
 </head>
-<body>
+<body id="body">
     <!--========== HEADER ==========-->
     <header class="header">
         <div class="container">
@@ -40,6 +40,31 @@
                         </li>
                     </ul>
                 </nav> <!-- /.nav -->
+                <div class="mobile__nav-wrapper">
+                    <button id="burger" class="open-mobile-nav">
+                        <span class="burger"></span>
+                        <span class="burger-text">Меню</span>
+                    </button>
+                    <nav class="mobile-nav" id="mobile-nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Главная</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Как начать игру</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Форум</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Мы ВКонтакте</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Илья вебер раб</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
                 <a href="#" class="btn">Пополнить счет</a>
             </div> <!-- /.header__inner -->
         </div> <!-- /.container -->
@@ -59,6 +84,7 @@
                                 <img src="img/icons/joystick.svg" alt="Joystick icon">
                                 Начать игру
                             </a>
+                            <a href="#" class="general__btn-responsive btn">Пополнить счет</a>
                         </div>
                     </div> <!-- /.general__content -->
                     <div class="general__visual">
@@ -75,6 +101,7 @@
                 <div class="monitoring__inner">
                     <div class="monitoring__visual">
                         <img src="img/monitoring/man.png" alt="Man" class="monitoring__img">
+                        <img src="img/monitoring/man-tablets.png" alt="Man" class="monitoring__img-responsive">
                     </div>
                     <div class="monitoring__content">
                         <div class="monitoring__server">

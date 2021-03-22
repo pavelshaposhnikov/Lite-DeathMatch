@@ -96,13 +96,13 @@ summary::marker {
 ==========================*/
 
 .header {
-    margin-top: 40px;
     position: absolute;
     width: 100%;
     z-index: 33;
 }
 
 .header__inner {
+    margin-top: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -142,6 +142,190 @@ summary::marker {
     left: calc(50% - 11px / 2);
     bottom: -5px;
 }
+
+/* MOBILE NAV */ 
+
+.mobile__nav-wrapper {
+    display: none;
+}
+
+/* Main menu positionning */
+
+.mobile-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    background: url(../img/general/general-bg.png);
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: all .375s;
+    width: 100vw;
+    height: 100vw;
+}
+
+.mobile-nav.is-open {
+    opacity: 1;
+    z-index: 100;
+    visibility: visible;
+}
+
+/* Background effect */
+.mobile-nav::before {
+	 content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -15px;
+    background: linear-gradient(180deg, #EC2121 0%, #AC0000 100%);
+    opacity: 0.4;
+    transform-origin: 0 0;
+    transform: skew(-14deg) translateX(-120%);
+    transition: all .275s .1s;
+}
+
+.mobile-nav.is-open::before {
+    transform: skew(-14deg) translateX(0);
+}
+
+/* Skewing effect on menu links */
+.mobile-nav .nav__list {
+    display: inline-flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: flex-end;
+    justify-content: center;
+    transform: translateX(-18%) skew(-16deg);
+}
+
+.mobile-nav .nav__item {
+    display: block;
+    margin: 15px 0;
+    font-size: 18px;
+    text-align: right;
+    transform: skew(16deg);
+}
+
+/* Apparition effect on links */
+.mobile-nav .nav__link {
+    opacity: 0;
+    transform: translateY(-10px);
+    color: #fff;
+}
+
+.mobile-nav.is-open a {
+    opacity: 1;
+    transform: translateY(0);
+}
+.mobile-nav .nav__item:nth-child(1) .nav__link {
+	transition: all 275ms 175ms
+}
+.mobile-nav .nav__item:nth-child(2) .nav__link {
+	transition: all 275ms 225ms
+}
+.mobile-nav .nav__item:nth-child(3) .nav__link {
+	transition: all 275ms 275ms
+}
+.mobile-nav .nav__item:nth-child(4) .nav__link {
+	transition: all 275ms 325ms
+}
+.mobile-nav .nav__item:nth-child(5) .nav__link {
+	transition: all 275ms 375ms
+}
+
+
+/* Decoration */
+.mobile-nav .nav__list,
+.mobile-nav .nav__item {
+	list-style: none;
+	padding: 0;
+}
+
+/* Burger Style */
+.open-mobile-nav {
+	position: absolute;
+	top: 15px;
+	padding-top: 20px;
+	right: 15px;
+	z-index: 1000;
+	background: none;
+	border: 0;
+	cursor: pointer;
+}
+
+.open-mobile-nav:focus {
+	outline: none;
+}
+
+.mobile__nav-wrapper .burger {
+	position: relative;
+	display: block;
+	width: 28px;
+	height: 4px;
+	margin: 0 auto;
+	background: #EC2121;
+	transform: skew(5deg);
+	transition: all .275s;
+}
+
+.mobile__nav-wrapper .burger:after,
+.mobile__nav-wrapper .burger:before {
+	content: '';
+	display: block;
+	height: 100%;
+	background: #EC2121;
+	transition: all .275s;
+}
+
+.mobile__nav-wrapper .burger:after {
+	transform: translateY(-12px) translateX(-2px) skew(-20deg);
+}
+
+.mobile__nav-wrapper .burger:before {
+	transform: translateY(-16px) skew(-10deg);
+}
+
+/* Toggle State part */
+.is-open .burger {
+	transform: skew(5deg) translateY(-8px) rotate(-45deg);
+    background: #FDF1F1;
+}
+
+.is-open .burger:before {
+	transform: translateY(0px) skew(-10deg) rotate(75deg);
+    background: #FDF1F1;
+}
+
+.is-open .burger:after {
+	transform: translateY(-12px) translateX(10px) skew(-20deg);
+    opacity: 0;
+}
+
+/* MENU Text part */
+
+.burger-text {
+	display: block;
+	font-size: .675rem;
+	letter-spacing: .05em;
+	margin-top: .5em;
+	text-transform: uppercase;
+	font-weight: 500;
+	text-align: center;
+	color: #000;
+}
+
+.is-open .burger-text {
+    color: #FDF1F1;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+  
 
 /*========================
       Section General 
@@ -201,6 +385,10 @@ summary::marker {
     color: #EC2121;
 }
 
+.general__btn-responsive {
+    display: none;
+}
+
 .general__btn img {
     margin-right: 5px;
     width: 24px;
@@ -249,6 +437,13 @@ summary::marker {
 .monitoring__img {
     width: 470px;
     height: 694px;
+}
+
+.monitoring__img-responsive {
+    display: none;
+    max-width: 630px;
+    width: 100%;
+    height: 558px;
 }
 
 .monitoring__server {
@@ -824,6 +1019,14 @@ summary::marker {
         margin-right: 0;
     }
 
+    .guide__item-content {
+        padding-top: 40px;
+    }
+
+    .socials {
+        margin-bottom: 120px;
+    }
+
     .socials__inner {
         justify-content: space-around;
         flex-wrap: wrap;
@@ -836,6 +1039,10 @@ summary::marker {
 
     .socials__item:nth-child(3) {
         margin-top: 50px;
+    }
+
+    .socials__item:nth-child(2) {
+        margin-right: 0;
     }
 }
 
@@ -857,7 +1064,11 @@ summary::marker {
     }
 
     .benefits__item:nth-child(3) {
-        margin-top: 50px;
+        margin-top: 30px;
+    }
+
+    .benefits__item {
+        margin-right: 0;
     }
 }
 
@@ -875,6 +1086,469 @@ summary::marker {
     }
 
     .footer__logo {
-        left: calc(53% - 110px / 2);
+        left: calc(52% - 110px / 2);
+    }
+}
+
+@media (max-width: 1015px) {
+    .guide__item-content {
+        padding: 25px 25px 25px;
+    }
+}
+
+@media (max-width: 990px) {
+
+    .nav {
+        display: none;
+    }
+
+    .mobile__nav-wrapper {
+        display: block;
+    }
+
+    .logo {
+        position: absolute;
+        left: calc(50% - 110px / 2);
+        top: 20px;
+    }
+
+    .header__inner .btn {
+        display: none;
+    }
+
+    .general {
+        padding-top: 90px;
+        min-height: 455px
+    }
+
+    .general::before {
+        left: -110px;
+    }
+
+    .general__inner {
+        justify-content: center;
+    }
+
+    .general__content {
+        text-align: center;
+    }
+
+    .general__title {
+        font-size: 47px;
+        max-width: 678px;
+    }
+
+    .general__title span {
+        font-size: 65px;
+    }
+
+    .general__buttons {
+        margin: 30px auto 0;
+    }
+
+    .general__buttons .btn:first-child {
+        display: none;
+    }
+
+    .general__btn-responsive {
+        display: flex;
+    }
+
+    .general__visual {
+        display: none;
+    }
+
+    .monitoring__inner {
+        flex-direction: column;
+    }
+
+    .monitoring__visual {
+        margin: 30px 0;
+    }
+
+    .monitoring__img {
+        display: none;
+    }
+
+    .monitoring__img-responsive {
+        display: block;
+    }
+
+    .monitoring__content {
+        margin-top: 40px;
+    }
+
+    .monitoring__info {
+        padding-right: 15px;
+    }
+
+    .monitoring__info-name {
+        font-size: 21px;
+    }
+
+    .adress-field {
+        font-size: 17px;
+    }
+
+    .monitoring__btn {
+        display: none;
+    }
+
+    .benefits__btn {
+        margin-top: 40px;
+    }
+
+    .guide__item {
+        max-width: 255px;
+    }
+
+    .guide__item-number {
+        font-size: 138px;
+    }
+
+    .guide__item-title {
+        font-size: 18px;
+    }
+
+    .guide__item-text {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 815px) {
+
+    .guide__btn {
+        margin-top: 15px;
+        font-size: 13px;
+    }
+
+    .socials__item {
+        max-width: 280px;
+    }
+
+    .socials__btn {
+        max-width: 160px;
+        width: 100%;
+    }
+
+    .socials__icon {
+        width: 39px;
+        height: 39px;
+    }
+
+    .socials__pin {
+        width: 100px;
+        height: 100px;
+    }
+
+    .socials__item:first-child .socials__btn {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 769px) {
+    .benefits__item {
+        margin-bottom: 30px;
+    }
+
+    .benefits__item:nth-child(3) {
+        margin-top: 0;
+    }
+
+    .benefits__content::before {
+        left: -10px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .guide {
+        min-height: 1400px;
+    }
+
+    .guide__inner .title {
+        margin-top: 100px;
+    }
+
+    .guide__content {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .guide__item-content {
+        padding: 30px 25px 40px;
+    }
+
+    .guide__item:nth-child(3) {
+        margin-top: 35px;
+    }
+
+    .guide__item:nth-child(2) {
+        margin-right: 0;
+    }
+
+    .guide__btn {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 605px) {
+
+    .general::before {
+        left: -240px;
+    }
+
+    .monitoring {
+        padding-top: 60px;
+    }
+
+    .benefits__content::before {
+        top: -135px;
+    }
+
+    .benefits__content {
+        margin-top: 90px;
+    }
+
+    .socials {
+        margin-bottom: 230px;
+    }
+
+    .socials__inner {
+        flex-direction: column;
+        bottom: -210px;
+        left: calc(50% - 360px / 2);
+    }
+
+    .socials__item {
+        margin: 0 0 50px 0;
+        max-width: 370px;
+    }
+
+    .socials__pin {
+        width: 112px;
+        height: 112px;
+    }
+
+    .socials__icon {
+        width: 58px;
+        height: 58px;
+    }
+
+    .socials__item:nth-child(3) {
+        margin-top: 0;
+    }
+
+    .socials__btn {
+        max-width: 223px;
+    }
+
+    .socials__item:first-child .socials__btn {
+        margin-top: 20px;
+    }
+
+}
+
+@media (max-width: 560px) {
+
+    .benefits__content::before {
+        top: -100px;
+    }
+
+    .guide__item {
+        max-width: 209px;
+    }
+
+    .guide__item-content {
+        padding: 15px 10px 15px;
+    }
+
+    .guide__btn {
+        margin-top: 25px;
+    }
+
+    .footer__inner::before {
+        right: 0;
+    }
+}
+
+@media (max-width: 485px) {
+
+    .monitoring__server {
+        width: 370px;
+    }
+
+    .monitoring__info-name {
+        font-size: 17px;
+    }
+
+    .monitoring__info {
+        padding-left: 50px;
+    }
+
+    .guide {
+        min-height: 2100px;
+    }
+
+    .guide__inner .title {
+        margin-top: 180px;
+    }
+
+    .guide__content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .guide__item {
+        max-width: 370px;
+        margin: 0 0 30px 0;
+    }
+
+    .guide__item-content {
+        padding: 60px 25px 35px;
+    }
+
+    .guide__item-title {
+        font-size: 21px;
+    }
+
+    .guide__item-text {
+        margin-top: 25px;
+    }
+
+    .socials__inner {
+        bottom: -200px;
+    }
+
+    .socials__item {
+        margin-bottom: 65px;
+    }
+
+    .footer__inner {
+        flex-direction: column;
+    }
+
+    .footer__logo {
+        top: 15px;
+    }
+
+    .footer__inner .nav__link {
+        margin-top: 55px;
+    }
+}
+
+@media (max-width: 414px) {
+
+    .title {
+        font-size: 21px;
+    }
+
+    .general__title span {
+        font-size: 50px;
+        line-height: 64px;
+    }
+
+    .general__title {
+        font-size: 38px;
+        max-width: 678px;
+        line-height: 41px;
+    }
+
+    .general__buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .general__buttons .btn {
+        margin-bottom: 25px;
+    }
+
+    .monitoring__numerator-score {
+        font-size: 50px;
+    }
+
+    .monitoring__numerator-item p {
+        font-size: 13px;
+    }
+
+    .monitoring__server {
+        width: 319px;
+    }
+
+    .monitoring__info {
+        padding-left: 35px;
+    }
+
+    .monitoring__info-name {
+        font-size: 15px;
+    }
+
+    .adress-field {
+        font-size: 15px;
+    }
+
+    .benefits__item:after {
+        background: url(../img/benefits/angle-tablets.png);
+        width: 89px;
+        height: 258px;
+    }
+
+    .benefits__item:before {
+        left: 10px;
+    }
+
+    .benefits__item:nth-child(2)::before, .benefits__item:nth-child(3)::before {
+        left: 3px;
+    }
+
+    .socials__item {
+        max-width: 319px;
+    }
+
+    .socials__inner {
+        left: calc(50% - 319px / 2);
+    }
+
+    .socials__icon {
+        width: 41px;
+        height: 41px;
+    }
+
+    .socials__item:first-child .socials__btn {
+        margin-top: 10px;
+    }
+
+    .footer__inner::before {
+        z-index: -1;
+        bottom: 75px;
+    }
+}
+
+@media (max-width: 344px) {
+    .benefits__item:after {
+        background: url(../img/benefits/angle-phones.png);
+        width: 68px;
+    }
+
+    .benefits__item:before {
+        background: url(../img/icons/small-holy.svg);
+        width: 42px;
+        height: 49px;
+        left: 5px;
+        bottom: calc(60% - 49px / 2);
+    }
+
+    .benefits__item:nth-child(2)::before {
+        background: url(../img/icons/small-joystick.svg);
+        width: 48px;
+        height: 34px;
+        bottom: calc(60% - 34px / 2);
+    }
+
+    .benefits__item:nth-child(3)::before {
+        background: url(../img/icons/small-store.svg);
+        width: 52px;
+        height: 48px;
+        bottom: calc(60% - 48px / 2);
     }
 }
