@@ -149,6 +149,13 @@ summary::marker {
     display: none;
 }
 
+.mobile-nav .nav__link:hover:before {
+    left: 0;
+    width: 100%;
+    height: 2px;
+    opacity: 0.2;
+}
+
 /* Main menu positionning */
 
 .mobile-nav {
@@ -194,11 +201,12 @@ summary::marker {
 
 /* Skewing effect on menu links */
 .mobile-nav .nav__list {
+    margin-top: 130px;
     display: inline-flex;
     flex-direction: column;
     height: 100%;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: start;
     transform: translateX(-18%) skew(-16deg);
 }
 
@@ -246,7 +254,7 @@ summary::marker {
 }
 
 /* Burger Style */
-.open-mobile-nav {
+.open__mobile {
 	position: absolute;
 	top: 15px;
 	padding-top: 20px;
@@ -257,7 +265,7 @@ summary::marker {
 	cursor: pointer;
 }
 
-.open-mobile-nav:focus {
+.open__mobile:focus {
 	outline: none;
 }
 
