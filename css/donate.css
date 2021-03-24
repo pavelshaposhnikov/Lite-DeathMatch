@@ -1,0 +1,474 @@
+/*========================
+        Main 
+==========================*/
+
+.main {
+    background: url(../img/donate/bg.png) center center no-repeat;
+    background-size: cover;
+    min-height: 1286px;
+    padding-top: 120px;
+    position: relative;
+}
+
+.main::before {
+    content: "";
+    background: url(../img/decorations/square.png);
+    position: absolute;
+    left: 0;
+    top: calc(35% - 502px / 2);
+    width: 349px;
+    height: 502px;
+    z-index: -1;
+}
+
+.main::after {
+    content: "";
+    background: url(../img/decorations/triangle.png);
+    position: absolute;
+    right: 200px;
+    top: calc(30% - 193px / 2);
+    width: 188px;
+    height: 193px;
+    z-index: -1;
+}
+
+/*========================
+      Section Payment 
+==========================*/
+
+.payment {
+    margin: 50px auto 75px;
+}
+
+.payment-admin {
+    margin-bottom: 0;
+}
+
+.payment__inner {
+    margin: 0 auto;
+    padding: 24px 0 45px 0;
+    max-width: 770px;
+    width: 100%;
+    height: 363px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.payment__inner-admin {
+    height: 314px;
+}
+
+.payment__inner-admin .btn {
+    margin: 0 auto;
+}
+
+.payment__content {
+    max-width: 530px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.payment__buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    height: 40px;
+    font-size: 17px;
+    font-weight: 700;
+    background-color: #FEE6E6;
+    color: #EC2121;
+    border-radius: 67px;
+    transition: all 0.3s linear;
+}
+
+.payment__btn:hover {
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(236, 33, 33, 0.2);
+    -moz-box-shadow: 0px 0px 15px 5px rgba(236, 33, 33, 0.2);
+    box-shadow: 0px 0px 15px 5px rgba(236, 33, 33, 0.2);
+    transition: all 0.3s linear;
+}
+
+.payment__btn-active {
+    background-color: #EC2121;
+    color: #fff;
+    -webkit-box-shadow: 0px 0px 25px 5px rgba(236, 33, 33, 0.2);
+    -moz-box-shadow: 0px 0px 25px 5px rgba(236, 33, 33, 0.2);
+    box-shadow: 0px 0px 25px 5px rgba(236, 33, 33, 0.2);
+}
+
+.payment__btn-active:hover {
+    -webkit-box-shadow: 0px 0px 25px 5px rgba(236, 33, 33, 0.2);
+    -moz-box-shadow: 0px 0px 25px 5px rgba(236, 33, 33, 0.2);
+    box-shadow: 0px 0px 25px 5px rgba(236, 33, 33, 0.2);
+}
+
+.payment__form {
+    margin-top: 30px;
+}
+
+.payment__form .payment__input:first-child {
+    margin-bottom: 10px;
+}
+
+.payment__input {
+    width: 100%;
+    height: 44px;
+    border: 1px solid #EC2121;
+    border-radius: 52px;
+    font-size: 14px;
+    color: #000;
+    padding: 0 23px;
+}
+
+.payment__input:active, .payment__input:focus {
+    border: 1px solid #FFD0D0;
+}
+
+.payment__form-btn {
+    margin: 31px auto 0;
+}
+
+.form__agreement {
+    display: block;
+    margin-top: 30px;
+}
+  
+.form__agreement input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+}
+  
+.form__agreement label {
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+
+.form__agreement a {
+      color: #EC2121;
+}
+  
+.form__agreement label:before {
+    content:'';
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 1px solid #EC2121;
+    opacity: .27;
+    border-radius: 50%;
+    padding: 9px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 9px;
+}
+  
+.form__agreement input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: calc(50% - 13px / 2);
+    left: calc(2% - 13px / 2);
+    width: 13px;
+    height: 13px;
+    background-color: #EC2121;
+    border-radius: 50%;
+}
+
+.payment__info {
+    margin: 45px auto;
+    max-width: 433px;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+}
+
+/*========================
+      Section Vip 
+==========================*/
+
+.vip {
+    margin-bottom: 70px;
+}
+
+.vip__content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+.vip__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    width: 32%;
+    height: 186px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.vip__item::before {
+    content: "";
+    background: url(../img/vip/angle.png);
+    width: 101px;
+    height: 186px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.vip__item::after {
+    content: "";
+    background: url(../img/icons/star.svg);
+    width: 58px;
+    height: 55px;
+    position: absolute;
+    left: 14px;
+    bottom: calc(57% - 55px / 2);
+}
+
+.vip__item:nth-child(2)::after {
+    background: url(../img/icons/discount.svg);
+    width: 62px;
+    height: 66px;
+    bottom: calc(57% - 66px / 2);
+}
+
+.vip__item:nth-child(3)::after {
+    background: url(../img/icons/crown.svg);
+    width: 62px;
+    height: 56px;
+    bottom: calc(57% - 56px / 2);
+}
+
+.vip__item-content {
+    padding: 0 20px 0 115px;
+}
+
+.vip__item-title {
+    font-size: 25px;
+    font-weight: 700;
+    color: #EC2121;
+    text-transform: uppercase;
+}
+
+.vip__item-text {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/*========================
+      Section Price 
+==========================*/
+
+.price {
+    padding-bottom: 50px;
+}
+
+.price__content {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.price__item {
+    margin-bottom: 63px;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 23%;
+    height: 188px;
+    text-align: center;
+    position: relative;
+}
+
+.price__item-name {
+    margin-top: 115px;
+    font-size: 25px;
+    font-weight: 700;
+    color: #EC2121;
+    text-transform: uppercase;
+}
+
+.price__img {
+    position: absolute;
+    bottom: calc(70% - 100px / 2);
+}
+
+.price__item:first-child .price__img {
+    left: calc(50% - 178px / 2);
+}
+
+.price__item:nth-child(2) .price__img {
+    left: calc(50% - 220px / 2);
+}
+
+.price__item:nth-child(3) .price__img {
+    left: calc(50% - 192px / 2);
+}
+
+.price__item:nth-child(4) .price__img {
+    left: calc(50% - 153px / 2);
+}
+
+.price__item:nth-child(5) .price__img {
+    left: calc(50% - 169px / 2);
+}
+
+.price__item:nth-child(6) .price__img {
+    left: calc(50% - 128px / 2);
+}
+
+.price__item:nth-child(7) .price__img {
+    left: calc(50% - 229px / 2);
+}
+
+.price__item:nth-child(8) .price__img {
+    left: calc(50% - 210px / 2);
+}
+
+/* PAGE "Покупка админки" */
+
+/*========================
+      Section Support 
+==========================*/
+
+.support {
+    margin: 37px auto;
+}
+
+.support__inner {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    max-width: 638px;
+    width: 100%;
+    height: 113px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.support__buttons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 556px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.support__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 263px;
+    width: 100%;
+    height: 74px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #EC2121;
+    border-radius: 10px;
+    transition: all 0.2s linear;
+}
+
+.support__btn:hover {
+    -webkit-box-shadow: 0px 0px 32px 0px rgba(236, 33, 33, 0.55);
+    -moz-box-shadow: 0px 0px 32px 0px rgba(236, 33, 33, 0.55);
+    box-shadow: 0px 0px 32px 0px rgba(236, 33, 33, 0.55);
+    transition: all 0.2s linear;
+}
+
+.support__btn img {
+    margin-right: 17px;
+    width: 46px;
+    height: 46px;
+}
+
+.support__btn p {
+    max-width: 135px;
+    width: 100%;
+}
+
+/*========================
+      Section Rules 
+==========================*/
+
+.rules {
+    padding-bottom: 110px;
+}
+
+.rules__inner {
+    margin: 0 auto;
+    padding: 65px 0;
+    max-width: 770px;
+    width: 100%;
+    height: 426px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.rules__content {
+    text-align: center;
+    max-width: 660px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.rules__title {
+    margin-bottom: 25px;
+    font-size: 25px;
+    font-weight: 700;
+    color: #000;
+}
+
+.rules__text {
+    font-size: 15px;
+}
+
+.rules__btn {
+    position: absolute;
+    left: calc(50% - 200px / 2);
+    bottom: -92px;
+}
+
+/* PAGE "Покупка админки" END */
+
+/* PAGE "Правила (agreement.html) */
+
+/*========================
+      Section Agreement 
+==========================*/
+
+.main-agreement {
+    min-height: 990px;
+}
+
+.agreement {
+    padding: 50px 0 80px;
+}
+
+.agreement__title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #000;
+}
+
+.agreement__text {
+    margin-top: 30px;
+    line-height: 174%;
+}

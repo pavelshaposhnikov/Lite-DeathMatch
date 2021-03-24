@@ -1,3 +1,9 @@
+// Import HTML template
+$(function(){
+  $("#included__header").load("template/header.html");
+  $("#included__footer").load("template/footer.html");
+});
+
 var c4 = $('.counter');
 
 c4.circleProgress({
