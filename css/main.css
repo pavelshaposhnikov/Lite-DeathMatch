@@ -136,7 +136,7 @@ summary::marker {
 .nav__link:hover:before {
     content: "";
     width: 11px;
-    height: 4px;
+    height: 2px;
     background-color: #EC2121;
     position: absolute;
     left: calc(50% - 11px / 2);
