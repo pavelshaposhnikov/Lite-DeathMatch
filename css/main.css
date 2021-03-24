@@ -200,7 +200,7 @@ summary::marker {
 
 /* Skewing effect on menu links */
 .mobile-nav .nav__list {
-    margin-top: 150px;
+    margin-top: 200px;
     display: inline-flex;
     flex-direction: column;
     height: 100%;
@@ -1125,7 +1125,7 @@ summary::marker {
 
     .general {
         padding-top: 120px;
-        min-height: 600px;
+        min-height: 550px;
         z-index: 0;
     }
 
@@ -1183,7 +1183,7 @@ summary::marker {
     }
 
     .monitoring__content {
-        margin-top: 40px;
+        margin-top: 20px;
     }
 
     .monitoring__info {
@@ -1516,7 +1516,7 @@ summary::marker {
     }
 
     .benefits__content::before {
-        top: -220px;
+        top: -230px;
         left: 122px;
     }
 
