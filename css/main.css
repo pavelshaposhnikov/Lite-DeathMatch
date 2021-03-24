@@ -152,8 +152,7 @@ summary::marker {
 .mobile-nav .nav__link:hover:before {
     left: 0;
     width: 100%;
-    height: 2px;
-    opacity: 0.2;
+    opacity: 0.6;
 }
 
 /* Main menu positionning */
@@ -201,7 +200,7 @@ summary::marker {
 
 /* Skewing effect on menu links */
 .mobile-nav .nav__list {
-    margin-top: 130px;
+    margin-top: 150px;
     display: inline-flex;
     flex-direction: column;
     height: 100%;
@@ -1125,8 +1124,9 @@ summary::marker {
     }
 
     .general {
-        padding-top: 90px;
-        min-height: 455px
+        padding-top: 120px;
+        min-height: 600px;
+        z-index: 0;
     }
 
     .general::before {
@@ -1315,7 +1315,7 @@ summary::marker {
     }
 
     .benefits__content {
-        margin-top: 90px;
+        margin-top: 50px;
     }
 
     .socials {
@@ -1516,39 +1516,68 @@ summary::marker {
     }
 
     .benefits__content::before {
-        top: -256px;
+        top: -220px;
         left: 122px;
     }
 
     .benefits__item:after {
         background: url(../img/benefits/angle-tablets.png);
-        width: 89px;
+        width: 86px;
         height: 258px;
     }
 
     .benefits__item:before {
-        left: 10px;
+        left: 9px;
     }
 
-    .benefits__item:nth-child(2)::before, .benefits__item:nth-child(3)::before {
-        left: 3px;
+    .benefits__item:nth-child(2)::before {
+        left: 2px;
     }
 
-    .socials__item {
-        max-width: 319px;
+    .benefits__item:nth-child(3)::before {
+        left: 1px;
+    }
+
+    .socials {
+        margin-bottom: 115px;
     }
 
     .socials__inner {
         left: calc(50% - 319px / 2);
+        bottom: -35px;
+    }
+
+    .socials__item {
+        max-width: 319px;
+        height: 100px;
+    }
+
+    .socials__pin {
+        height: 83px;
     }
 
     .socials__icon {
-        width: 41px;
-        height: 41px;
+        width: 36px;
+        height: 36px;
     }
 
-    .socials__item:first-child .socials__btn {
-        margin-top: 10px;
+    .socials__item::before {
+        width: 130px;
+        height: 130px;
+        bottom: calc(50% - 130px / 2);
+    }
+
+    .socials__item-title {
+        font-size: 15px;
+    }
+
+    .socials__item:nth-child(3) .socials__item-title {
+        max-width: 115px;
+    }
+
+    .socials__btn, .socials__item:first-child .socials__btn {
+        margin-top: 7px;
+        font-size: 15px;
     }
 
     .footer__inner::before {
@@ -1560,7 +1589,7 @@ summary::marker {
 @media (max-width: 344px) {
     .benefits__item:after {
         background: url(../img/benefits/angle-phones.png);
-        width: 68px;
+        width: 62px;
     }
 
     .benefits__item:before {
@@ -1575,13 +1604,14 @@ summary::marker {
         background: url(../img/icons/small-joystick.svg);
         width: 48px;
         height: 34px;
-        bottom: calc(60% - 34px / 2);
+        bottom: calc(57% - 34px / 2);
     }
 
     .benefits__item:nth-child(3)::before {
         background: url(../img/icons/small-store.svg);
         width: 52px;
         height: 48px;
-        bottom: calc(60% - 48px / 2);
+        bottom: calc(58% - 48px / 2);
+        left: 1px;
     }
 }
