@@ -47,36 +47,6 @@ $("html, body").animate({
   }, 600);
 });  
 
-
-let burger = document.getElementById('burger'),
-	  nav    = document.getElementById('mobile-nav'),
-	  slowmo = document.getElementById('slowmo');
-    body = document.getElementById('body');
-
-$('.nav__link').on('click', function(event){
-  $('#body').removeClass('no-scroll');
-  $('.mobile-nav').removeClass('is-open');
-  $('.open__mobile').removeClass('is-open');
-});    
-
-burger.addEventListener('click', function(e){
-	this.classList.toggle('is-open');
-	nav.classList.toggle('is-open');
-});
-
-burger.addEventListener('click', function(e){
-	body.classList.toggle('no-scroll');
-});
-
-slowmo.addEventListener('click', function(e){
-	this.classList.toggle('is-slowmo');
-});
-
-burger.addEventListener('click', function(e){
-	this.classList.toggle('is-open');
-	nav.classList.toggle('is-open');
-});
-
 /* Onload demo - dirty timeout */
 let clickEvent = new Event('click');
 

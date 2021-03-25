@@ -8,6 +8,7 @@
     min-height: 1286px;
     padding-top: 120px;
     position: relative;
+    z-index: 1;
 }
 
 .main::before {
@@ -153,7 +154,6 @@
     cursor: pointer;
     font-size: 14px;
     color: #000;
-    display: flex;
     align-items: center;
 }
 
@@ -413,7 +413,7 @@
 
 .rules__inner {
     margin: 0 auto;
-    padding: 65px 0;
+    padding: 50px 0;
     max-width: 770px;
     width: 100%;
     height: 426px;
@@ -443,7 +443,7 @@
 .rules__btn {
     position: absolute;
     left: calc(50% - 200px / 2);
-    bottom: -92px;
+    bottom: calc(-28% - 46px / 2);
 }
 
 /* PAGE "Покупка админки" END */
@@ -453,10 +453,6 @@
 /*========================
       Section Agreement 
 ==========================*/
-
-.main-agreement {
-    min-height: 990px;
-}
 
 .agreement {
     padding: 50px 0 80px;
@@ -471,4 +467,261 @@
 .agreement__text {
     margin-top: 30px;
     line-height: 174%;
+}
+
+/*========================
+         Media 
+==========================*/
+
+@media (max-width: 1145px) {
+    .vip__content {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .vip__item {
+        width: 40%;
+    }
+
+    .vip__item:nth-child(3) {
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 990px) {
+    .price__item {
+        width: 26%;
+    }
+
+    .rules__content {
+        padding: 0 20px;
+    }
+
+    .rules__btn {
+        bottom: calc(-21% - 46px / 2);
+    }
+}
+
+@media (max-width: 920px) {
+    .vip__item {
+        width: 48%;
+    }
+}
+
+@media (max-width: 880px) {
+    .price__item {
+        width: 34%;
+    }
+}
+
+@media (max-width: 860px) {
+
+    .main::before {
+        left: -143px;
+        top: calc(48% - 502px / 2);
+    }
+
+    .price__item {
+        width: 46%;
+    }
+}
+
+@media (max-width: 775px) {
+    .vip__item-title {
+        font-size: 23px;
+    }
+
+    .vip__item-text {
+        margin-top: 11px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 720px) {
+
+    .rules__inner {
+        height: 460px;
+    }
+
+    .vip__item {
+        width: 75%;
+    }
+
+    .vip__item:nth-child(2) {
+        margin-top: 25px;
+    }
+
+    .rules__btn {
+        bottom: calc(-16% - 46px / 2);
+    }
+}
+
+@media (max-width: 616px) {
+
+    .support__inner {
+        height: 240px;
+        max-width: 436px;
+    }
+
+    .support__buttons {
+        flex-direction: column;
+    }
+
+    .support__buttons .support__btn:first-child {
+        margin-bottom: 15px;
+    }
+
+    .support__btn {
+        margin: 0 auto;
+    }
+
+    .rules__inner {
+        height: 515px;
+    }
+
+    .rules__btn {
+        bottom: calc(-17% - 46px / 2);
+    }
+}
+
+@media (max-width: 580px) {
+    .payment__content {
+        padding: 0 20px;
+    }
+
+    .form__agreement label {
+        font-size: 12px;
+    }
+
+    .rules__btn {
+        bottom: calc(-11% - 46px / 2);
+    }
+}
+
+@media (max-width: 535px) {
+
+    .payment__btn {
+        width: 175px;
+        font-size: 15px;
+    }
+
+    .vip__inner .title {
+        text-align: center;
+        max-width: 200px;
+        width: 100%;
+    }
+
+    .vip__inner .title span {
+        margin-left: 30px;
+    }
+
+    .price__item {
+        width: 48%;
+    }
+
+    .rules__inner {
+        height: 535px;
+    }
+}
+
+@media (max-width: 480px) {
+    .vip__item {
+        width: 100%;
+    }
+
+    .price__item {
+        width: 100%;
+    }
+
+    .rules__inner {
+        height: 580px;
+    }
+
+    .rules__btn {
+        bottom: calc(-7% - 46px / 2);
+    }
+}
+
+@media (max-width: 420px) {
+    .payment__btn {
+        width: 150px;
+        font-size: 13px;
+    }
+    
+    .title {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .rules__inner {
+        height: 690px;
+    }
+
+    .rules__btn {
+        bottom: calc(-12% - 46px / 2);
+    }
+}
+
+@media (max-width: 385px) {
+
+    .payment__btn {
+        width: 133px;
+        font-size: 11px;
+    }
+
+    .vip__item-title {
+        font-size: 20px;
+    }
+
+    .rules__inner {
+        height: 820px;
+    }
+}
+
+@media (max-width: 342px) {
+
+    .payment__inner {
+        height: 425px;
+    }
+
+    .payment__inner-admin {
+        height: 380px;
+    }
+
+    .payment__buttons {
+        flex-direction: column;
+    }
+
+    .payment__buttons .payment__btn:first-child {
+        margin-bottom: 10px;
+    }
+
+    .payment__btn {
+        margin: 0 auto;
+        width: 180px;
+        font-size: 13px;
+    }
+
+    .vip__item-content {
+        padding: 0 20px 0 105px;
+    }
+}
+
+@media (max-width: 325px) {
+    .vip__item-title {
+        font-size: 17px;
+    }
+
+    .vip__item-text {
+        font-size: 11px;
+    }
+
+    .rules__inner {
+        height: 870px;
+    }
+
+    .rules__btn {
+        bottom: calc(-5% - 46px / 2);
+    }
 }
