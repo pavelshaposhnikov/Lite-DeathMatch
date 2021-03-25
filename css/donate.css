@@ -38,7 +38,7 @@
 ==========================*/
 
 .payment {
-    margin: 50px auto 75px;
+    margin: 0 auto 75px;
 }
 
 .payment-admin {
@@ -455,7 +455,7 @@
 ==========================*/
 
 .agreement {
-    padding: 50px 0 80px;
+    padding: 0 0 80px;
 }
 
 .agreement__title {
