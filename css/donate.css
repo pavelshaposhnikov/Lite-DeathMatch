@@ -709,7 +709,8 @@
 
 @media (max-width: 404px) {
     .form__agreement input:checked + label:after {
-        left: calc(5.9% - 13.5px / 2);
+        left: calc(5.7% - 13.5px / 2);
+        top: calc(24.7% - 13.5px / 2);
     }
 }
 
