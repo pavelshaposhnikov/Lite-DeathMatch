@@ -277,5 +277,37 @@
     <script src="https://rawgit.com/kottenator/jquery-circle-progress/1.2.2/dist/circle-progress.js"></script>
     <!-- Main js file connection -->
     <script src="js/main.js"></script>
+    <!-- Mobile menu js script connection -->
+    <script type="text/javascript">
+        let burger = document.getElementById('burger'),
+            nav    = document.getElementById('mobile-nav'),
+            slowmo = document.getElementById('slowmo');
+            body   = document.getElementById('body');
+    
+        // Открытие мобильного Гамбургер меню
+        $('.nav__link').on('click', function(event){
+        $('#body').removeClass('no-scroll');
+        $('.mobile-nav').removeClass('is-open');
+        $('.open__mobile').removeClass('is-open');
+        });    
+    
+        burger.addEventListener('click', function(e){
+            this.classList.toggle('is-open');
+            nav.classList.toggle('is-open');
+        });
+    
+        burger.addEventListener('click', function(e){
+            body.classList.toggle('no-scroll');
+        });
+    
+        slowmo.addEventListener('click', function(e){
+            this.classList.toggle('is-slowmo');
+        });
+    
+        burger.addEventListener('click', function(e){
+            this.classList.toggle('is-open');
+            nav.classList.toggle('is-open');
+        });
+    </script>
 </body>
 </html>
