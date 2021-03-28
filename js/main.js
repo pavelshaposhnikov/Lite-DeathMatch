@@ -17,6 +17,19 @@ c4.circleProgress({
   startAngle: 0
 });
 
+var c4 = $('.counter-empty');
+
+c4.circleProgress({
+  startAngle: -Math.PI / 4 * 3,
+  value: 0,
+  lineCap: 'round',
+  fill: {color: '#EC2121'},
+  emptyFill: "#FBD3D3",
+  size: 84,
+  thickness: 10,
+  startAngle: 0
+});
+
 $(function() {
     // copy content to clipboard
     function copyToClipboard(element) {

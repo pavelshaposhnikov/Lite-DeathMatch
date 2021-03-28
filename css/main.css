@@ -471,7 +471,12 @@ summary::marker {
     height: 558px;
 }
 
+.monitoring__content {
+    margin-top: 60px;
+}
+
 .monitoring__server {
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -482,6 +487,29 @@ summary::marker {
     border-radius: 10px;
     border-top-left-radius: 48px;
     border-bottom-left-radius: 48px;
+    position: relative;
+}
+
+.monitoring__server:first-child {
+    margin-top: 0;
+}
+
+.monitoring__server:first-child::before {
+    display: none;
+}
+
+.monitoring__server::before {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 630px;
+    height: 97px;
+    border-radius: 10px;
+    border-top-left-radius: 48px;
+    border-bottom-left-radius: 48px;
+    opacity: .5;
 }
 
 .counter {
@@ -498,6 +526,7 @@ summary::marker {
     flex-direction: column;
     font-size: 12px;
     color: #FBD3D3;
+    text-align: center;
 }
 
 .counter span {
@@ -539,34 +568,6 @@ summary::marker {
     font-weight: 500;
     width: 126px;
     height: 42px;
-}
-
-.monitoring__numerator {
-    margin: 40px auto 0;
-    display: flex;
-    justify-content: space-between;
-    max-width: 490px;
-    width: 100%;
-}
-
-.monitoring__numerator-item {
-    font-family: 'Roboto', sans-serif;
-    max-width: 100px;
-    width: 100%;
-    text-align: center;
-}
-
-.monitoring__numerator-item p {
-    font-size: 15px;
-    font-weight: 400;
-    color: #D0B9B9;
-    text-transform: uppercase;
-}
-
-.monitoring__numerator-score {
-    font-size: 60px;
-    font-weight: 500;
-    color: #000;
 }
 
 /*========================
@@ -1074,7 +1075,7 @@ summary::marker {
 
 @media (max-width: 1130px) {
 
-    .monitoring__server {
+    .monitoring__server, .monitoring__server::before {
         width: 535px;
         padding-right: 10px;
     }
@@ -1100,7 +1101,7 @@ summary::marker {
 
 @media (max-width: 1040px) {
 
-    .monitoring__server {
+    .monitoring__server, .monitoring__server::before {
         width: 485px;
     }
 
@@ -1410,7 +1411,7 @@ summary::marker {
         font-size: 55px;
     }
 
-    .monitoring__server {
+    .monitoring__server, .monitoring__server::before {
         width: 370px;
     }
 
@@ -1523,15 +1524,7 @@ summary::marker {
         display: none;
     }
 
-    .monitoring__numerator-score {
-        font-size: 50px;
-    }
-
-    .monitoring__numerator-item p {
-        font-size: 13px;
-    }
-
-    .monitoring__server {
+    .monitoring__server, .monitoring__server::before {
         width: 319px;
     }
 
