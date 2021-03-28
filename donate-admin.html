@@ -12,6 +12,7 @@
     <title>Lite DeathMatch</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/donate.css">
@@ -67,19 +68,19 @@
                 <div class="vip__inner">
                     <h2 class="title">Особенности <span>VIP пользователя</span></h2>
                     <div class="vip__content">
-                        <div class="vip__item">
+                        <div class="vip__item" data-aos="fade-up" data-aos-duration="700">
                             <div class="vip__item-content">
                                 <h3 class="vip__item-title">Преимущества</h3>
                                 <p class="vip__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis urna proin netus quam.</p>
                             </div>
                         </div>
-                        <div class="vip__item">
+                        <div class="vip__item" data-aos="fade-up" data-aos-duration="1200">
                             <div class="vip__item-content">
                                 <h3 class="vip__item-title">Преимущества</h3>
                                 <p class="vip__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis urna proin netus quam.</p>
                             </div>
                         </div>
-                        <div class="vip__item">
+                        <div class="vip__item" data-aos="fade-up" data-aos-duration="1700">
                             <div class="vip__item-content">
                                 <h3 class="vip__item-title">Преимущества</h3>
                                 <p class="vip__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis urna proin netus quam.</p>
@@ -118,5 +119,9 @@
     <script src="https://rawgit.com/kottenator/jquery-circle-progress/1.2.2/dist/circle-progress.js"></script>
     <!-- Main js file connection -->
     <script src="js/main.js"></script>
+    <!-- AOS Animation on Scroll CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- AOS Animation on Scroll Initialize-->
+    <script> AOS.init(); </script>
 </body>
 </html>

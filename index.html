@@ -149,26 +149,26 @@
                 <div class="benefits__inner">
                     <h2 class="title"><span>Особенности</span> Игры</h2>
                     <div class="benefits__content">
-                        <div class="benefits__item">
+                        <div class="benefits__item" data-aos="fade-up" data-aos-duration="700">
                             <div class="benefits__item-content">
                                 <h3 class="benefits__item-title">Интересные квесты</h3>
                                 <p class="benefits__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis urna proin netus quam.</p>
                             </div>
                         </div>
-                        <div class="benefits__item">
+                        <div class="benefits__item" data-aos="fade-up" data-aos-duration="1200">
                             <div class="benefits__item-content">
                                 <h3 class="benefits__item-title">Мини игры</h3>
                                 <p class="benefits__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis urna proin netus quam.</p>
                             </div>
                         </div>
-                        <div class="benefits__item">
+                        <div class="benefits__item" data-aos="fade-up" data-aos-duration="1700">
                             <div class="benefits__item-content">
                                 <h3 class="benefits__item-title">Торговля имуществом</h3>
                                 <p class="benefits__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis urna proin netus quam.</p>
                             </div>
                         </div>
                     </div>
-                    <a href="https://youtu.be/ucLzxNSPsg8" target="_blank" class="benefits__btn btn">И многое другое</a>
+                    <a href="https://youtu.be/ucLzxNSPsg8" target="_blank" class="benefits__btn btn" data-aos="fade-up" data-aos-duration="700">И многое другое</a>
                 </div> <!-- /.benefits__inner -->
             </div> <!-- /.container -->
         </section>
@@ -213,7 +213,7 @@
             <div class="container">
                 <div class="socials__inner">
                     <div class="socials__item">
-                        <a href="#" class="socials__pin">
+                        <a href="#" class="socials__pin" data-aos="zoom-in">
                             <img src="img/icons/vk.svg" alt="VK" class="socials__icon">
                         </a>
                         <div class="socials__item-content">
@@ -222,7 +222,7 @@
                         </div>
                     </div>
                     <div class="socials__item">
-                        <a href="#" class="socials__pin">
+                        <a href="#" class="socials__pin" data-aos="zoom-in">
                             <img src="img/icons/telegram.svg" alt="Telegram" class="socials__icon">
                         </a>
                         <div class="socials__item-content">
@@ -231,7 +231,7 @@
                         </div>
                     </div>
                     <div class="socials__item">
-                        <a href="#" class="socials__pin">
+                        <a href="#" class="socials__pin" data-aos="zoom-in">
                             <img src="img/icons/discord.svg" alt="Discord" class="socials__icon">
                         </a>
                         <div class="socials__item-content">
@@ -274,9 +274,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Jquery circle progress library for section monitoring -->
     <script src="https://rawgit.com/kottenator/jquery-circle-progress/1.2.2/dist/circle-progress.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Main js file connection -->
     <script src="js/main.js"></script>
+    <!-- AOS Animation on Scroll CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- AOS Animation on Scroll Initialize-->
+    <script> AOS.init(); </script>
     <!-- Mobile menu js script connection -->
     <script type="text/javascript">
         let burger = document.getElementById('burger'),
